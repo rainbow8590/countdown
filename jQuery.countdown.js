@@ -24,6 +24,9 @@
 
                     //获取时间差的秒数
                     var diff = (FtimeMs - LtimeMs)/1000;
+                    if(diff < 0){
+                        return;
+                    }
                     //获取时间差的天
                     var day = Math.floor(diff / (24*60*60))
                     //获取时间差的时
